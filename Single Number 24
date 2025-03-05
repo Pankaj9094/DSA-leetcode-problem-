@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+void single(int* nums, int numsSize){
+    int result = 0,i;
+    
+    for(i=0;i<=numsSize;i++){
+        result ^= nums[i];
+    }
+    printf("%d",result);
+}
+
+int main() {
+    int nums;
+    scanf("%d",&nums);
+    
+    int arr[nums],i;
+    for(i=0 ; i<nums ; i++){
+    scanf("%d",&arr[i]);
+    }
+     single(arr, nums);
+    
+    return 0;
+}
+
+ 
