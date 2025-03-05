@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int n,ele;
+    scanf("%d",&n);
+    
+    int arr[n],i;
+    for(i=0 ; i<n ; i++){
+        scanf("%d",&arr[i]);
+    }
+    scanf("%d",&ele);
+    
+    int j,r1 = -1,r2=-1;
+    for(i=0 ; i<n ; i++){
+        for(j=i+1 ; j<n ; j++){
+        if(arr[i] + arr[j]==ele){
+            r1 = i;
+            r2 = j;
+            break;
+        }
+        }
+    }
+    if(r1 != -1 && r2 != -1)
+    printf("%d %d",r1,r2);
+    
+    return 0;
+}
